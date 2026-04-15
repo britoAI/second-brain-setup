@@ -19,7 +19,7 @@ Pro Kategorie mindestens 3 konkrete, umsetzbare Ideen. Beziehe dich auf spezifis
 
 Wenn der Report fertig ist, fuehre diese Schritte aus:
 1. Pruefe das aktuelle Datum
-2. Speichere den Report als `Ideen-Report YYYY-MM-DD.md` mit Frontmatter:
+2. Speichere den Report als `Dein Brain/Ideen-Report YYYY-MM-DD.md` mit Frontmatter:
    ```yaml
    ---
    typ: recherche
@@ -27,6 +27,6 @@ Wenn der Report fertig ist, fuehre diese Schritte aus:
    datum: YYYY-MM-DD
    ---
    ```
-3. Oeffne `Ideen.md` und fuege unter der Ueberschrift `## Ideen-Reports` einen Link ein:
+3. Oeffne `Dein Brain/Ideen.md` und fuege unter der Ueberschrift `## Ideen-Reports` einen Link ein:
    `- [[Ideen-Report YYYY-MM-DD]] – Automatisch generierter Ideen-Scan`
    Falls die Ueberschrift `## Ideen-Reports` noch nicht existiert, erstelle sie vor `## Status-Legende`.

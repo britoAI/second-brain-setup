@@ -91,6 +91,51 @@ Starte Claude Code im Vault-Verzeichnis und nutze diese Commands:
 
 ---
 
+## Session-Management
+
+Das Setup ist **file-basiert by design**: Slash-Commands schreiben in Dateien, nicht in den Session-Speicher. Das erlaubt effiziente, kleine Sessions und verlaesslichen Uebergang zwischen ihnen.
+
+### Grundregel
+
+> **Neue Session pro Kontext-Wechsel – nicht pro Tag.**
+
+Eine typische Session bleibt klein und fokussiert auf ein Thema. Mehrere Sessions pro Tag sind normal (typisch 4-5).
+
+### Wann neue Session starten?
+
+| Situation | Neue Session? |
+|---|---|
+| Morgens `/today` | ✅ Ja – sauberer Start |
+| Abends `/closeday` | ✅ Ja – unabhaengig von morgens |
+| Thema wechseln (Arbeit → privat) | ✅ Ja |
+| Anderes Projekt (Projekt A → Projekt B) | ✅ Ja |
+| Neue Idee / Recherche ohne Bezug | ✅ Ja |
+| Am gleichen Thema weiterarbeiten | ❌ Nein – weiterschreiben |
+| Kleiner Fix oder Rueckfrage | ❌ Nein – mittendrin reinwerfen |
+
+**Daumenregel:** *"Hat das noch mit dem zu tun was wir vor 10 Nachrichten gemacht haben?"* – Nein → `/clear` oder neuer Chat.
+
+### Warum das so funktioniert
+
+`/today` schreibt den Tagesplan in die `YYYY-MM-DD.md`. `/closeday` liest diese Datei wieder ein, prueft File-Timestamps fuer Aenderungen und synct Tasks in Quest-Dateien. **Nichts davon braucht die Morgen-Session im Gedaechtnis** – alle relevanten Daten liegen auf Platte.
+
+Dasselbe gilt fuer Arbeit an Quest-Dateien: Erledigte Punkte landen direkt in der Quest-Datei, nicht nur im Chat. Dadurch bleibt jede Session klein und `/closeday` sieht am Abend alles was wichtig war.
+
+### Was du dafuer tun musst
+
+**Waehrend der Arbeit in einer Session:**
+- Wichtige Entscheidungen **in die passende Quest-Datei schreiben**, nicht nur diskutieren
+- Neue Ideen in `Ideen.md` oder als eigene Notiz ablegen
+- Tasks mit Prefix (z.B. `ProjektA:`, `ProjektB:`) markieren damit Task-Sync sie beim `/closeday` findet
+
+Wenn ein Thema nicht in einer Datei landet, ist es beim `/closeday` verloren – auch wenn die Morning-Session noch offen ist.
+
+### Bei Fehlern von Claude
+
+Wenn Claude eine deutlich falsche Antwort gibt: **Session abbrechen und neu starten**. Nicht korrigieren. Der Fehler + deine Korrektur + die neue Antwort bleiben sonst fuer immer im Context und kosten bei jeder folgenden Nachricht Token.
+
+---
+
 ## Wie Claude Code mit dem Vault arbeitet
 
 ### Komponenten

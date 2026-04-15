@@ -22,7 +22,7 @@ Formatiere als uebersichtliche Liste. Antworte auf Deutsch.
 
 ## Nach Bestaetigung durch den User: Automatisch speichern
 
-1. Erstelle oder oeffne die Daily Note `YYYY-MM-DD.md` (heutiges Datum)
+1. Erstelle oder oeffne die Daily Note `Dein Brain/YYYY-MM-DD.md` (heutiges Datum)
 2. Falls die Datei noch nicht existiert, erstelle sie mit Frontmatter:
    ```yaml
    ---
@@ -42,6 +42,6 @@ Formatiere als uebersichtliche Liste. Antworte auf Deutsch.
 ## Zeiterfassung: Startzeit eintragen
 
 1. Pruefe die aktuelle Uhrzeit (`date +%H:%M`)
-2. Oeffne `Zeiterfassung.md`
+2. Oeffne `Dein Brain/Zeiterfassung.md`
 3. Fuege eine neue Zeile in die Tabelle ein mit: `| DD.MM.YYYY | HH:MM | | | |`
    (Tag + Startzeit, Stop/Pause/Dauer bleiben leer – werden von /closeday ausgefuellt)

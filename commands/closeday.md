@@ -40,7 +40,7 @@ Wenn `Projekte.md` nicht existiert: Dem User mitteilen dass Task-Sync uebersprun
 ### Sync-Schritte
 
 1. **Task-Extraktion:** Alle Checkboxen aus der heutigen Daily Note lesen (`- [ ]` und `- [x]`)
-2. **Prefix-Erkennung:** Fuer jede Task den Prefix pruefen (Format: `Prefix: Task-Text`)
+2. **Prefix-Erkennung:** Fuer jede Task den Prefix pruefen (`ProjektA:`, `ProjektB:`, etc.)
 3. **Unklare Tasks sammeln:** Tasks ohne erkennbaren Prefix oder ohne Mapping → dem User zeigen und nachfragen
 4. **Fuer jede erkannte Task:**
    - Quest-Datei oeffnen
@@ -64,19 +64,19 @@ Zeige dem User eine Vorschau und warte auf Bestaetigung:
 ```
 📋 Task-Sync Vorschau:
 
-<Quest-Datei A>:
+Projekt-A-Quest.md:
   ✅ Erledigt → Erledigt-Sektion:
-     - Task 1 erledigt
-     - Task 2 erledigt
+     - Erste Teilaufgabe abgeschlossen
+     - Review mit Stakeholder gemacht
   📝 Offene Punkte → neu hinzufuegen:
-     - Task 3 offen
+     - Naechsten Meilenstein vorbereiten
 
-<Quest-Datei B>:
+Projekt-B-Quest.md:
   📝 Offene Punkte → neu hinzufuegen:
-     - Task 4 offen
+     - Umsetzung starten
 
 ❓ Unklar (bitte zuordnen):
-  - "Task ohne Prefix" → welche Quest?
+  - "Notebook aufraeumen" → welche Quest?
 
 Synchronisieren? [ja/nein]
 ```
@@ -87,7 +87,7 @@ Synchronisieren? [ja/nein]
 
 - **Quest-Datei existiert nicht:** Warnen, User fragen ob neue Datei erstellt werden soll oder Sync fuer diesen Prefix uebersprungen werden soll
 - **Kein Prefix in Task:** Task wird nicht automatisch gesynct, bleibt nur in Daily Note
-- **Level-basierte Quests:** Quests ohne "Offene Punkte" Sektion (z.B. Brain Dashboard Quest) werden ueber das Frontmatter (level) getrackt, nicht ueber Task-Sync
+- **Brain Dashboard Quest.md:** Hat keine "Offene Punkte" Sektion, bleibt level-basiert – Task-Sync ueberspringen
 - **Fuzzy-Match unsicher:** Bei unklarer Zuordnung nachfragen statt raten
 
 ## Zeiterfassung: Stoppzeit eintragen

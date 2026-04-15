@@ -1,0 +1,24 @@
+/* Brain Dashboard Styling */
+
+progress {
+  width: 120px;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--background-modifier-border);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--background-secondary);
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #f59e0b, #10b981);
+  border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #f59e0b, #10b981);
+  border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+# Persoenliche Daten
+*.local.json
+settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Obsidian Cache
+.obsidian/workspace.json
+.obsidian/cache/
+.trash/

@@ -4,7 +4,40 @@ Gehe dabei so vor:
 1. Pruefe welche Dateien heute bearbeitet wurden (Timestamps)
 2. Vergleiche mit dem Tagesplan falls vorhanden
 3. Identifiziere was erledigt wurde und was offen blieb
-4. Pruefe ob neue Achievements freigeschaltet wurden
+4. **Quest-Level-Review (PFLICHT, bevor Bericht geschrieben wird)** – siehe Abschnitt unten
+5. Pruefe ob neue Achievements freigeschaltet wurden
+
+## Quest-Level-Review
+
+Vor dem Bericht aktiv pruefen, ob User-Arbeit einen Level-Abschluss bedeutet. Nicht passiv warten – Timestamps allein reichen nicht, weil vieles ausserhalb des Vaults passiert (externe Dokumente, Termine vor Ort etc.).
+
+**Schritte:**
+1. Brain Dashboard Quest.md vollstaendig lesen
+2. Aus `Projekte.md` die **Sub-Projekt-Aliase** lesen (Tabelle am Ende) – das sind Begriffe, die auf Parent-Quests triggern, auch wenn kein Prefix genutzt wird
+3. Sammle alle aktiven Quests (`quest_status: aktiv`) mit aktuellem Level
+4. Fuer JEDE aktive Quest: User-Args + Daily-Note-Inhalt gegen Level-Beschreibungen abgleichen. Sub-Projekt-Namen in Level-Texten sind starke Trigger (z.B. wenn ein Unterprojekt-Kuerzel im Level-Text steht und in User-Args vorkommt = Treffer)
+5. Bei thematischem Treffer proaktiv vorschlagen – **inklusive aktuellem Quest-Stand**, damit User Drift zwischen Quest-Datei und Realitaet sofort sieht:
+
+```
+🎯 Quest-Level-Check: ProjektA – Teilgebiet
+
+Aktueller Stand laut Brain Dashboard Quest.md (level: 2, level_max: 5):
+  [x] Level 1: Grundstruktur fertig
+  [x] Level 2: Erstes Derivat reviewt
+  [ ] Level 3: Template verbessern
+  [ ] Level 4: Zweites Derivat fertigstellen
+  [ ] Level 5: Alle Derivate abgenommen
+
+Heutige Arbeit: "Zweites Derivat auf V1.3 mit neuer Vorlage + Erfahrung aus Derivat 1"
+→ Passt auf Level 4. Level 3 (Template) ggf. auch schon erledigt?
+
+Aktueller Stand korrekt? Oder ist Quest-Datei nicht auf dem Laufenden?
+Welcher Level ist heute erreicht? [z.B. 2→4 / nur 3 / nur 4 / keiner]
+```
+
+6. Auch Level-Spruenge ueber mehrere Stufen moeglich (z.B. 2 → 4). Der Quest-File-Stand kann veraltet sein – User darf den aktuellen Stand korrigieren, nicht nur den Tages-Fortschritt.
+7. Bestaetigter Level-Abschluss = Achievement-Kandidat
+8. Keine Quest-Datei ohne explizite User-Bestaetigung modifizieren
 
 Frage den User nach dem Abend-Energie-Check:
 > "🔋 Energie jetzt (1-5)? 😤 Stress am Ende des Tages (1-5)? 🏃 Sport heute?"

@@ -47,3 +47,17 @@ Beim `/closeday`:
 5. Zeigt dir Vorschau und fragt vor dem Schreiben nach Bestaetigung
 
 Wenn eine Quest-Datei keine `# Offene Punkte` Sektion hat (z.B. Brain Dashboard Quest), wird sie nicht veraendert – level-basierte Quests werden ueber das Frontmatter getrackt.
+
+## Sub-Projekt-Aliase
+
+Wenn User in /closeday oder /today von einem Sub-Projekt spricht ohne Prefix, triggert der Begriff die Parent-Quest. /closeday nutzt diese Tabelle im Quest-Level-Review, um Level-Spruenge nicht zu verpassen.
+
+Beispiel-Setup (eigene Eintraege ergaenzen):
+
+| Alias / Sub-Projekt | Parent-Quest |
+|---|---|
+| Teilgebiet1 / Derivat-A / Derivat-B | [[MeinProjekt]] |
+| IBN-Phase1 / Anlagentyp-X | [[AnderesProjekt]] |
+| Unterkomponente-Y / Modul-Z | [[DrittesProjekt]] |
+
+**Pflege:** Wenn ein Quest neue Sub-Projekt-Namen bekommt (z.B. neue Phase, neues Derivat, neue Komponente), hier als Alias eintragen. So erkennt /closeday auch informelle Erwaehnungen ("hab Derivat-B auf V1.3 gehoben") als Level-Trigger fuer die Parent-Quest.
